@@ -1,17 +1,40 @@
-# inclass14
+# Activity 14 - Firebase Cloud Messaging
 
-A new Flutter project.
+## Overview
+This Flutter app demonstrates Firebase Cloud Messaging integration across all app lifecycle states.
 
-## Getting Started
+## Features
+- Firebase initialization
+- Notification permission request
+- FCM token display
+- Foreground message handling with `onMessage`
+- Background tap handling with `onMessageOpenedApp`
+- Terminated app handling with `getInitialMessage()`
+- UI updates from notification/data payloads
+- Safe defaults for missing payload fields
 
-This project is a starting point for a Flutter application.
+## Packages Used
+- firebase_core
+- firebase_messaging
 
-A few resources to get you started if this is your first Flutter project:
+## How to Run
+1. Run `flutter pub get`
+2. Run `flutterfire configure`
+3. Launch with `flutter run`
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Test Scenarios
+- Foreground message
+- Background notification tap
+- Terminated launch from notification
+- Valid payload test
+- Incomplete payload safety test
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Evidence Collected
+- Token screenshot
+- Foreground screenshot
+- Background screenshot
+- Terminated screenshot
+- Console logs showing handler execution
+
+## Reflection Summary
+This activity showed how FCM behaves differently depending on whether the app is active, backgrounded, or terminated. The project used a single FCM service and safe payload mapping to keep the code organized and prevent crashes from missing data.
